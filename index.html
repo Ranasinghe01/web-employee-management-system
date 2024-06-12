@@ -18,39 +18,79 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <h1>
-            Employee Management
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                + NEW EMPLOYEE
-            </button>
+<header class="p-4">
+    <h1 class="d-flex justify-content-between align-items-center p-2">
+        Employee Management
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            + NEW EMPLOYEE
+        </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add New Employee</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-bod">
+                        <form class="row g-3">
+                            <div class="col-sm -12">
+                                <label class="form-label">ID</label>
+                                <input type="text" class="form-control" id="txtID">
+                            </div>
+                            <div class="col-sm-12">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" id="txtName">
+                            </div>
+                            <div class="col-sm-12">
+                                <label class="form-label">Address</label>
+                                <input type="text" class="form-control" id="txtAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="col-sm-12">
+                                <label class="form-label">Contact</label>
+                                <input type="text" class="form-control" id="txtContact">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="btn-save" type="button" class="btn btn-primary">Save</button>
                     </div>
                 </div>
             </div>
-        </h1>
-    </header>
-    <table>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Contact</th>
+        </div>
+    </h1>
+</header>
+<section class="p-4">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody id="tbl-body-container">
+        <!--            <tr>-->
+        <!--                <td>E001</td>-->
+        <!--                <td>kasun</td>-->
+        <!--                <td>Galle</td>-->
+        <!--                <td>011-7542684</td>-->
+        <!--                <td>-->
+        <!--                    <i class="bi bi-trash3"></i>-->
+        <!--                </td>-->
+        <!--            </tr>-->
+        <tr id="no-data" class="table-active">
+            <td colspan="5" class="table-active text-center">
+                No Employee Available
+            </td>
+        </tr>
+        </tbody>
     </table>
+</section>
 </body>
 </html>
