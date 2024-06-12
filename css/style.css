@@ -2,12 +2,16 @@
     font-size: 1.5rem;
 }
 
-#tbl-body-container .td-list {
+#tbl-body-container tr.td-list {
     cursor: pointer;
     border-radius: 5px;
 
     &:hover {
-        color: cornflowerblue;
+        background-color: lightgray !important;
+
+        td {
+            background-color: transparent;
+        }
     }
 
     i.bi.bi-trash3 {
