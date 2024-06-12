@@ -66,6 +66,7 @@ btnSaveEmpElm.addEventListener('click',
         trElm.append(tdIdElm, tdNameElm, tdAddressElm, tdContactElm, tdIconElm);
 
         iElm.setAttribute("class", "bi bi-trash3");
+        trElm.setAttribute("class", "td-list");
 
         tblBodyContainerElm.append(trElm);
 

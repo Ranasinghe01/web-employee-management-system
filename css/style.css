@@ -1,0 +1,20 @@
+#form-container {
+    font-size: 1.5rem;
+}
+
+#tbl-body-container .td-list {
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+        color: cornflowerblue;
+    }
+
+    i.bi.bi-trash3 {
+        font-size: 1.2rem;
+
+        &:hover {
+            color: red;
+        }
+    }
+}
